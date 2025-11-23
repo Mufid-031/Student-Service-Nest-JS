@@ -14,14 +14,14 @@ export class CreateStudentDto {
   @IsString()
   nim: string;
 
-  @IsString()
-  name: string;
-
   @IsEnum(['MALE', 'FEMALE'])
   gender: Gender;
 
   @IsString()
   major: string;
+
+  @IsString()
+  faculty: string;
 
   @IsInt()
   semester: number;

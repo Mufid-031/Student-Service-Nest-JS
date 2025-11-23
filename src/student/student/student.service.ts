@@ -28,10 +28,7 @@ export class StudentService {
   }
 
   async update(id: number, updateDto: UpdateStudentDto) {
-    return this.prisma.student.update({
-      where: { id },
-      data: updateDto,
-    });
+    return this.prisma.student.update({ where: { id }, data: updateDto });
   }
 
   remove(id: number) {

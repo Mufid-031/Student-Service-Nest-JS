@@ -21,6 +21,7 @@ import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { StudentService } from './student.service';
 import { StudentEntity } from '../entities/student.entity';
 import { CreateStudentDto } from '../dto/create-student.dto';
+import { UpdateStudentDto } from '../dto/update-student.dto';
 
 @Controller('student')
 @ApiTags('student')
@@ -59,7 +60,7 @@ export class StudentController {
   @Patch(':id')
   @ApiBearerAuth()
   @ApiOkResponse({ type: StudentEntity })
-  update(@Param('id') id: string, @Body() updateDto: CreateStudentDto) {
+  update(@Param('id') id: string, @Body() updateDto: UpdateStudentDto) {
     return this.studentService.update(+id, updateDto);
   }
 

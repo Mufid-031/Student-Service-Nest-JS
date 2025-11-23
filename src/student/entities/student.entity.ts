@@ -11,13 +11,13 @@ export class StudentEntity {
   nim: string;
 
   @ApiProperty()
-  name: string;
-
-  @ApiProperty()
   gender: Gender;
 
   @ApiProperty()
   major: string;
+
+  @ApiProperty()
+  faculty: string;
 
   @ApiProperty()
   semester: number;

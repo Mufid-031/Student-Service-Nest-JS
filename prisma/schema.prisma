@@ -14,9 +14,9 @@ model Student {
   id        Int      @id @default(autoincrement())
   userId    Int      @unique
   nim       String   @unique
-  name      String
   gender    Gender
   major     String
+  faculty   String
   semester  Int
   address   String?
   phone     String?
